@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{box-sizing: border-box;}
+		body{
+			width: 800px;
+		}
+		div{
+			width: 100px;
+			height: 100px;
+			float: left;
+		}
+
+		.impar{
+			background-color: black;
+		}
+
+		.par{
+			background-color: white;
+			
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+		
+		//document.write('<h1>Hola</h1>');
+
+		//necesito que me pinteis dinamicamente un tablero de ajedrez.
+
+		for (var i = 1; i <= 8; i++) {
+			
+			if(i%2 != 0)
+			{
+				for(var j=1; j<=8; j++){
+					if(j%2 != 0)
+					{
+						document.write('<div class="impar"></div>');
+					}
+					else
+					{
+						document.write('<div class="par"></div>');
+					}
+				}
+			}
+			else{
+				
+				for(var k=1; k<=8; k++){
+					if(k%2 != 0)
+					{
+						document.write('<div class="par"></div>');
+					}
+					else
+					{
+						document.write('<div class="impar"></div>');
+					}
+				}
+				
+			}
+			
+		}
+
+
+	</script>
+
+
+</body>
+</html>

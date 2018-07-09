@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio con operadores</title>
+</head>
+<body>
+	
+
+	<script>
+			//dado 54321 segundos sacame por pantalla con un alert. HORAS, MINUTOS y SEGUNDOS que tiene ese cantidad de segundos dada.
+
+
+			//que tengo 
+
+			var segundos = 123345;
+
+			//que me piden
+
+			var horas;
+			var minutos;
+			var segundosrestantes;
+
+			horas = segundos / (60*60) //3600 segundos
+
+			horas = parseInt(horas); 
+
+			segundosrestantes = segundos % (60*60);
+
+			minutos = segundosrestantes / 60;
+
+			minutos = parseInt(minutos);
+
+			segundosrestantes = segundosrestantes%60;
+
+			alert("En "+segundos+" segundos tengo "+horas+" horas, "+minutos+" minutos, "+segundosrestantes+" segundos");
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

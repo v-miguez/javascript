@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Condicional Switch</title>
+</head>
+<body id="cuerpo">
+
+	<script>
+		
+		var color = prompt('Dame un color');
+		color = color.toLowerCase(); //toUpperCase();
+
+		/*if(color == "vermellón")
+		{
+			color = "vermellon";
+		}*/
+
+		//case sensitive sensible a mayusculas y minisculas, no es lo mismo Rojo que rojo.
+
+		switch (color) {
+			case "rojo":
+			case "vermellon":
+			case "vermellón":
+			case "tomato":
+				document.getElementById('cuerpo').style.background = 'red';
+			break;
+			case "azul":
+				document.getElementById('cuerpo').style.background = 'blue';
+			break;
+			default:
+				document.getElementById('cuerpo').style.background = 'black';
+				break;
+		}
+
+	</script>
+	
+</body>
+</html>

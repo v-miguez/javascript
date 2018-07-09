@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio bucles</title>
+
+	<style>
+		
+		.cuadrado{
+			width: 100px;
+			height: 100px;
+			background-color: black;
+			margin:10px;
+		}
+
+		.circulo{
+			background-color: black;
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+			margin:10px;
+		}
+
+		.triangulo{
+			background-color: black;
+			border-right: 100px solid white;
+			border-left: 100px solid white;
+			border-top: 100px solid white;
+			border-bottom: 100px solid black;
+			width: 0px;
+			height: 0px;
+			margin: 10px;
+		}
+
+		.rojo{
+			background-color: red;
+		}
+
+		.azul{
+			background-color: blue;
+		}
+
+	</style>
+</head>
+<body>
+	
+
+	<script>
+		
+		//quiero una aplicación que me pida por pantalla un numero de elementos graficos, posteriormemente me pida el tipo grafico, a elegir entre tres cuadrado, circulo y triangulo. Y posteriormente dibuje tanto graficos de dicha forma en la pantalla.
+
+		var numeroElementos = prompt('Dame un numero de elementos');
+		var tipoGrafico = prompt('Dame un gráfico (cuadrado, triangulo, circulo)');
+		var color = prompt('Dame un color');
+
+		for(var i=1; i<=numeroElementos; i++)
+		{
+
+				switch (tipoGrafico) {
+					case 'cuadrado':
+						document.write('<div class="cuadrado '+color+'"></div>');
+					break;
+					case 'triangulo':
+						document.write('<div class="triangulo '+color+'"></div>');
+					break;
+					case 'circulo':
+						document.write('<div class="circulo '+color+'"></div>');
+					break;
+				}
+
+		} 
+
+
+		/*
+			
+			for(var i=1; i<=numeroElementos; i++)
+			{
+						document.write('<div class="'+tipoGrafico+'"></div>');
+	
+
+			} 
+
+		*/
+
+	</script>
+
+
+</body>
+</html>
