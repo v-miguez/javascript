@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio DOM</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	
+	<ul>
+		<li><a href="">Item 1</a></li>
+		<li><a href="">Item 2</a></li>
+		<li><a href="">Item 3</a></li>
+	</ul>
+
+<script>
+	
+		//quiero que le cambies el texto a los enlace de forma dinamica y le añadais href a google en los tres casos.
+
+		var listado = document.getElementsByTagName('ul');
+
+		var enlaces = listado[0].getElementsByTagName('a');
+
+		for(var i= 0; i<enlaces.length; i++)
+		{
+			enlaces[i].innerText = "Articulo " + (i+1);
+			enlaces[i].href = "http://www.google.com";
+		}
+
+
+</script>
+
+</body>
+</html>

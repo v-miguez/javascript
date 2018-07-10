@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio DOM</title>
+
+</head>
+<body>
+	
+	<ul class="">
+		<li><a href="">Item 1</a></li>
+		<li><a href="">Item 2</a></li>
+		<li><a href="">Item 3</a></li>
+		<li><a href="">Item 4</a></li>
+		<li><a href="">Item 5</a></li>
+		<li><a href="">Item 6</a></li>
+		<li><a href="">Item 7</a></li>
+	</ul>
+
+
+<script>
+	
+		
+
+		
+		var eleccion = prompt('que quieres hacer, cambiarNumero o recolocar');
+		var listado = document.getElementsByTagName('li');
+
+
+		if(eleccion == "cambiarNumero")
+		{
+			var nElementos = prompt('Dame un numero de elementos');
+			cambiarNumero(listado, nElementos);
+		}
+		else if(eleccion == "recolocar")
+		{
+			var tipo = prompt('Dame un disposición, vertical u horizontal');
+			recolocar(listado, tipo);
+		}
+
+		//que me pida por pantalla la cantidad de elementos que quiero mostrar y me muestre ese numero de elementos en listado, ocultando el resto.
+
+		function cambiarNumero(pLista, pCantidad){
+
+			for(var i=pCantidad; i<pLista.length; i++)
+			{
+			var li = pLista[i].style.display = "none";
+			}
+
+		}
+
+		//que me pida por pantalla si quiero un listado horizontal o vertical y que segun le diga me lo cambie.
+
+		
+		function recolocar(pLista, pTipo)
+		{
+			for(var j=0; j<pLista.length; j++)
+			{
+				pLista[j].style.display = (pTipo == "horizontal") ? "inline-block" : "block";
+			}
+		}
+		
+		
+
+		
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

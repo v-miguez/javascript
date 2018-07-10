@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>funciones que devuelven parametros</title>
+</head>
+<body>
+
+	<script>
+			var tipoCalculo = "suma";
+			var resultado = operacion(2,4, tipoCalculo);
+			
+
+			function operacion(pNumero1, pNumero2, pTipo){
+
+				var sumatorio;
+				if(pTipo == "resta"){
+					sumatorio = pNumero1 - pNumero2
+				}
+				else{
+					var sumatorio = pNumero1 + pNumero2;
+				}
+			
+				return sumatorio;
+			}
+
+
+			alert(resultado);
+
+
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM Basico</title>
+</head>
+<body>
+	
+	<p id="primerp">primer texto</p>
+	<p class="paraf">segundo texto</p>
+	<p class="paraf">tercer texto</p>
+	<p class="paraf">cuarto texto</p>
+
+	<a id="enlace" href="http://www.google.com">ir a google</a>
+
+	<script>
+		
+		var parrafos = document.getElementsByTagName('p');
+		console.log(parrafos);
+
+		for(var i=0; i<parrafos.length; i++)
+		{
+			//alert(parrafos[i].innerText);
+		}
+
+		//alert(document.getElementById('primerp').innerText);
+
+
+		var parrafos = document.getElementsByClassName('paraf');
+
+
+
+		//ejemplo atributo
+
+		var enlace = document.getElementById('enlace');
+ 
+		enlace.href = "http://www.yahoo.es";
+		enlace.style.fontSize = "120px";
+		enlace.style.color = "#664420";
+
+	</script>
+
+</body>
+</html>

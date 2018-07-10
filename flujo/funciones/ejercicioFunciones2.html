@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio Funciones</title>
+</head>
+<body>
+	<script>
+		
+
+		//Dado un radio cualquiera recibido por pantalla calculame y pintame el circulo en pantalla
+
+		var radio = parseInt(prompt("Dame un radio del circulo"));
+
+		const PI = 3.14;
+
+		pintarCirculo(radio, PI);
+
+
+		function pintarCirculo(pRadio, pPi)
+		{
+			var area = pPi * (pRadio*pRadio);
+
+			alert(area);
+
+			document.write('<div id="circulo"></div>');
+			document.getElementById('circulo').style.borderRadius = pRadio+"px";
+			document.getElementById('circulo').style.width = pRadio*2+"px";
+			document.getElementById('circulo').style.height = pRadio*2+"px";
+			document.getElementById('circulo').style.background = "red";
+
+		}
+
+	</script>
+</body>
+</html>

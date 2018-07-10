@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>funciones que reciben paramatros</title>
+</head>
+<body>
+
+
+	<script>
+		
+
+
+		function getDatosAlumno(pNombre, pEdad, pAltura="170"){
+
+			var nombre = pNombre;
+			var edad = pEdad;
+			var mensaje = "El alumno "+nombre+" tiene "+edad+" años y mide "+ pAltura;
+			alert(mensaje);
+		}
+
+
+		getDatosAlumno( ,"Victor", "25");
+
+		var alumnoBootcamp = "Ivan";
+		var edadAlumno = "29";
+
+		getDatosAlumno("180", alumnoBootcamp, edadAlumno);
+
+
+
+
+
+	</script>
+	
+</body>
+</html>

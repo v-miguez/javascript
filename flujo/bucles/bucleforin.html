@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Bucle for in</title>
+</head>
+<body>
+	<script>
+			
+			var cliente = {
+				nombre: "Carrefour",
+				trabajadores: 5000,
+				sedes: 100,
+				CIF: "A5434556",
+				direccion: {
+					sede1:{
+						ciudad: "Madrid",
+						telefono: "91232789",
+						calle: "San nicasio 29"
+					},
+					sede2:{
+						ciudad: "Barcelona",
+						telefono: "93232789",
+						calle: "Las Ramblas 39"
+					},
+					sede3:{
+						ciudad: "Zaragoza",
+						telefono: "94232789",
+						calle: "La Pilarica 3"
+					}
+				}
+			}
+
+			//nomeclatura de punto
+
+				//console.log(cliente.direccion.sede1.calle);
+
+			//nomeclatura de corchete.
+
+				//console.log(cliente['direccion']['sede1']['calle']);
+
+	
+
+	//creeis un objeto alumno que tenga nombre, apellido, matricula, edad, calificaciones y asignaturas.
+
+
+		var alumno = {
+				nombre: "Juan Antonio",
+				apellido: "Perez",
+				matricula: "F4564325",
+				edad: 36,
+				asignaturas:{
+					asignatura1:{
+						nombre: "lengua",
+						calificacion: 6
+					},
+					asignatura2:{
+						nombre: "matematicas",
+						calificacion: 7
+					},
+					asignatura3:{
+						nombre: "ingles",
+						calificacion: 4
+					},
+					asignatura4:{
+						nombre: "geometria",
+						calificacion: 6
+					},
+					asignatura5:{
+						nombre: "dibujo",
+						calificacion: 2
+					},
+					asignatura6:{
+						nombre: "plastica",
+						calificacion: 7
+					},
+					asignatura7:{
+						nombre: "educacion fisica",
+						calificacion: 9
+					}
+				}
+		}
+
+
+		//console.log('El alumno '+alumno.nombre+' '+alumno.apellido+' con matricula '+alumno.matricula+' tiene una calificación '+alumno.asignaturas.asignatura3.calificacion+' en la asignatura '+alumno.asignaturas.asignatura3.nombre+'')
+
+
+		for( var clave in alumno)
+		{
+			if(typeof(alumno[clave]) != "object"){
+				//console.log(clave +" : "+ alumno[clave]);
+			}else 
+			{
+				for(var asignaturas in alumno[clave])
+				{
+					if(typeof(alumno[clave][asignaturas]) == "object")
+					{
+						for(var asignatura in alumno[clave][asignaturas])
+						{
+					
+							//console.log(alumno[clave][asignaturas][asignatura])
+						}	
+					}
+
+				}	
+			}
+			
+		}
+
+		//sacarme todas las asignaturas con sus respectivas notas.
+
+		var asignaturas = alumno.asignaturas;
+		
+		//console.log(asignaturas);
+
+		for(materia in asignaturas){
+
+			var materia = asignaturas[materia];
+
+			console.log(materia.nombre + " : " + materia['calificacion'] );
+
+		}
+
+
+
+	</script>
+</body>
+</html>

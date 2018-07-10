@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio bucles</title>
+</head>
+<body>
+
+	<script>
+		
+		//crear un objeto llamado coches, modelo, marca, color, datos de matriculación, datos del seguro, datos del conductor.
+
+			//datos de matriculación: año matriculacion, matricula, ciudad de matriculacion.
+
+			//datos del conductor: nombre y numero carnet de conducir.
+
+			//datos del seguro: numero de poliza, tipo de seguro.
+
+
+			//quiero que me saqueis por pantalla de forma separada.
+
+			//dado el modelo X saqueme por pantallas sus datos de matriculación.
+
+			//dado el color X todos sus datos del seguro.
+
+			//var datos = https://jsonplaceholder.typicode.com/posts
+
+			var coche={
+				modelo: "F40",
+				marca: "Ferrari",
+				color: "amarillo",
+				datosMatriculacion:{
+					anio: "2018",
+					matricula: "9850JZJ",
+					ciudad: "Madrid"
+				},
+				datosConductor:{
+					nombre:"Juan",
+					ncarnet: "452345V"
+				},
+				datosSeguro:{
+					poliza: "2345VFG",
+					tipo: "a todo riesgo"
+				}
+
+			}
+
+
+			var datosMatricula = coche.datosMatriculacion;
+			var datosSeguro = coche.datosSeguro;
+
+
+			for(dato in datosMatricula){
+				console.log(dato + ": " +datosMatricula[dato]);
+			}
+
+			for(dseguro in datosSeguro){
+				console.log(dseguro + ": " + datosSeguro[dseguro]);
+			}
+
+
+
+
+	</script>
+</body>
+</html>
