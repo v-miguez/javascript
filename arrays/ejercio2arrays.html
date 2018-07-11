@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio Array 2</title>
+</head>
+<body>
+	<script>
+		
+			//crear un listado que contenga registros de pacientes. Cada paciente tendrá como datos su nombre, apellido, edad, diagnostico, numero de ss.
+
+
+			//vais a crear 10 registros.
+
+			//el programa realizará dos acciones:
+
+				// sacará por pantalla todos los pacientes de entre 18 y 25 años
+				// y sacará por pantalla todos los pacientes cuyo numero de la seguridad social acabe en 0;
+
+			var nombres = new Array('Juan','Jeni','Ines','Victor','Ivan','Santi', 'Jorge','Gustavo', 'Luis', 'Mario');
+			var apellidos = new Array('Perez','Garcia','Villalba','Miguez','Del Campo','Iñigo', 'Ronald','Vallejo', 'Martinez', 'Giron');
+			var edad = new Array(55,18,24,40,29,39, 15,23, 33, 25);
+			var diagnostico = new Array('miopia', 'cefalea', 'conjuntivitis','gripe', 'cefalea', 'miopia','conjuntivitis', 'migraña', 'miopia', 'gripe');
+			var numeross = new Array(2354,5435,3476,5670,1235,3450,6730,1237,6666,4324);
+
+			var listaPacientes = new Array();
+
+			for(var i=0; i<nombres.length; i++){
+
+				listaPacientes[i] = {
+					"nombre": nombres[i],
+					"apellido" : apellidos[i],
+					"edad": edad[i],
+					"diagnostico": diagnostico[i],
+					"numeross" : numeross[i]
+				}
+
+			}
+
+
+			//voy filtrar pacientes de entre 18 y 25 años
+
+			/* for(var j=0; j<listaPacientes.length; j++)
+			{
+				
+				if(listaPacientes[j]['edad'] >= 18 && listaPacientes[j]['edad'] < 25)
+				{
+					console.log(listaPacientes[j])
+				}
+
+			} */
+
+			function filtrarEdad(pLista, pEdadMinima = 0, pEdadMaxima= 99)
+			{
+				for(var j=0; j<pLista.length; j++)
+				{
+				
+					if(pLista[j]['edad'] >= pEdadMinima && pLista[j]['edad'] <= pEdadMaxima)
+					{
+					console.log(pLista[j])
+					}
+
+				}
+
+			}
+
+			//filtrarEdad(listaPacientes, 18, 18)
+
+
+			 //y sacará por pantalla todos los pacientes cuyo numero de la seguridad social acabe en 0;
+
+
+			 //como saco el ultimo digito de un numero
+
+			 function calcularUltimoDigito(pNumero)
+			 {
+			 	var digito = pNumero%10
+
+			 	return digito;
+			 }
+			 
+
+
+			 for(var k=0; k<listaPacientes.length; k++)
+			 {
+			 	var ultimoDigito = calcularUltimoDigito(listaPacientes[k]['numeross'])
+			 	if(ultimoDigito == 0)
+			 	{
+			 		console.log(listaPacientes[k]);
+			 	}
+			 }
+
+			
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Array multidimesionales 2</title>
+</head>
+<body>
+
+	<script>
+	
+			var alumno2 = new Array();
+
+			alumno1 = {'nombre': 'Juan', 'edad': 36, 'matricula': 'A3465'};
+
+			//console.log(alumno1);
+
+			var alumno2 = new Array();
+
+			alumno2 = {'nombre': 'Jeni', 'edad': 20, 'matricula': 'A34523'};
+
+			var neoland = new Array();
+
+			neoland = [alumno1, alumno2];
+
+			for(var i = 0; i< neoland.length; i++)
+			{
+				//pintar un unico valor de cada objeto
+				console.log(neoland[i]['edad']);
+				
+
+				//pintar todos los datos de los objetos.
+				for(datos in neoland[i])
+				{
+					console.log(neoland[i][datos])
+				}
+			}
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu de web dinamico</title>
+</head>
+<body>
+
+	<header>
+		<ul id="menu">
+		</ul>
+	</header>
+
+	<script>
+			//crear un listado con las secciones de una web con ese listado, crear un menu dinamico que aumente o disminuya en funcion de mi listado.
+			var menu = new Array('Home', 'Quienes Somos' ,'Trabaja con nosotros', 'Galeria','FAQ');
+			var lista = "";
+
+			for( var i=0; i<menu.length; i++)
+			{
+				var url = menu[i].toLowerCase();
+
+				//var urlSinespacios = quitarEspacios(url);
+				var urlSinespacios = url.replace(/ /g, "_")
+
+				lista = lista + '<li><a href="'+urlSinespacios+'.html">'+menu[i]+'</a></li>';
+			}
+
+			document.getElementById('menu').innerHTML = lista;
+
+
+
+
+			function quitarEspacios(pString){
+				var palabra = "";
+				
+				for(var i= 0; i<pString.length; i++)
+				{
+					if(pString[i] != " ")
+					{
+						palabra += pString[i];
+					}
+
+				}
+
+				return palabra;
+			}
+
+
+
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
