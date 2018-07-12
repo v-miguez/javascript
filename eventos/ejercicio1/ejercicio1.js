@@ -18,6 +18,9 @@ var nombres = new Array('Juan','Jeni','Ines','Victor','Ivan','Santi', 'Jorge','G
 
 			}
 
+
+var main = document.getElementById('main');
+
 /* Creo el select dinamico de enfermedades */
 
 
@@ -32,40 +35,83 @@ for(var i= 0; i<listadoEnfermedades.length; i++)
 }
 
 
+
+
 selectorDiagnostico.addEventListener('change', dameDiagnostico);
 
-function dameDiagnostico()
+function dameDiagnostico(event)
 {
-
 	filtrarDiagnostico(listaPacientes, this.value);
 }
 
 
+
+/* termino el select dinamico de enfermedades */
+
+/* Creo el select dinamico de edades */
+
+
+var selectorEdades = document.getElementById('edades');
+
+for(var j= 1; j<=100; j++)
+{
+	selectorEdades.innerHTML += '<option value="'+j+'">'+j+'</option>'
+}
+
+selectorEdades.addEventListener('change', dameEdad);
+
+
+function dameEdad(event){
+
+	filtrarEdad(listaPacientes, this.value)
+}
 
 
 
 /* termino el select dinamico de enfermedades */
 
 
+/* input de busqueda en javascript */
 
-function filtrarDiagnostico(pLista, pDiagnostico)
+var cajaTexto = document.getElementById('inputSearch');
+var botonConsulta = document.getElementById('consulta');
+
+botonConsulta.addEventListener('click', dameConsulta);
+
+
+function dameConsulta(){
+
+	var consulta = document.getElementById('inputSearch').value;
+	buscarPaciente(listaPacientes, consulta); 
+}
+
+function buscarPaciente(pLista,pNombre)
 {
-	var main = document.getElementById('main');
 	main.innerHTML = "";
-	var contador = 0;
-	for(var i=0 ; i< pLista.length ; i++)
+	contador = 0
+	for(var i=0; i<pLista.length; i++)
 	{
-		if(pLista[i]['diagnostico'] == pDiagnostico){
-		main.innerHTML += '<div class="ficha"><h3>'+pLista[i]['nombre']+'</h3><h4>'+pLista[i]['diagnostico']+'</h4><p>'+pLista[i]['edad']+'</p><p>'+pLista[i]['numeross']+'</p></div>';
-		contador++;
+		if(pLista[i]['nombre'].toLowerCase() == pNombre.toLowerCase())
+		{
+			main.innerHTML += '<div class="ficha"><h3>'+pLista[i]['nombre']+'</h3><h4>'+pLista[i]['diagnostico']+'</h4><p>'+pLista[i]['edad']+'</p><p>'+pLista[i]['numeross']+'</p></div>';
+			contador++;
 		}
 	}
+
 	if(contador == 0)
 	{
-		main.innerHTML = "No existen resultados";
+		main.innrHTML = "No existe nada con estos parametros";
 	}
 
 }
+
+
+
+
+
+
+
+
 
 
 
