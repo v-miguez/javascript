@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Lanzar eventos</title>
+
+	<style>
+		div{
+			width: 100px;
+			height: 20px;
+			background-color: red;
+			color: white;
+			padding: 10px;
+			text-align:center;
+			cursor: pointer; 
+		}
+	</style>
+</head>
+<body>
+		
+		<div onclick="saludar('Juan')">
+			<span>Saludar</span>
+		</div>
+
+		<select onchange="seleccionarCiudad()">
+			<option value="madrid">Madrid</option>
+			<option value="barcelona">Barcelona</option>
+		</select>
+
+<script>
+	
+	function saludar(pNombre){
+		alert('hola '+ pNombre);
+	}
+
+	function seleccionarCiudad()
+	{
+		alert(document.getElementsByTagName('select')[0].value);
+	}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio de Eventos 2</title>
+	<style>
+	#lista{
+		list-style: none;
+	}
+	#lista li{
+		background-color: black;
+		padding: 10px;
+		color: white;
+		width: 200px;
+		margin-bottom: 5px;
+		cursor: pointer;
+	}
+
+	</style>
+</head>
+<body>
+	
+	<ul id="lista">
+		<li id="blue">Azul</li>
+		<li id="red">Rojo</li>
+		<li id="yellow">Amarillo</li>
+		<li id="green">Verde</li>
+	</ul>
+
+	
+
+<script>
+		
+		var listaBotones = document.getElementById('lista');
+
+		var botones = listaBotones.getElementsByTagName('li');
+
+
+		for(var i=0; i<botones.length; i++)
+		{
+			botones[i].addEventListener('click', cargarColor);	
+		}
+		
+
+
+		/*function cargarColor(event){
+			switch (this.innerText) {
+				case "Azul":
+					document.body.style.backgroundColor = 'blue';
+				break;
+				case "Rojo":
+					document.body.style.backgroundColor = 'red';
+				break;
+				case "Amarillo":
+					document.body.style.backgroundColor = 'yellow';
+				break;
+				case "Verde":
+					document.body.style.backgroundColor = 'green';
+				break;
+				
+			}
+		}*/
+
+		function cargarColor(event){
+			document.body.style.backgroundColor = this.id;
+		}
+
+
+
+
+</script>
+</body>
+</html>
