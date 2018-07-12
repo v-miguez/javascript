@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crear elementos nuevos</title>
+</head>
+<body>
+	
+	<ul id="listado">
+		<li>Marca</li>
+		<li>Marca</li>
+		<li>Marca</li>
+		<li>Marca</li>
+	</ul>
+
+	<button id="boton">Borrar</button>
+	<script>
+		
+		var parrafo = document.createElement('p');
+
+		var texto = document.createTextNode('En lugar de la mancha de cuyo nombre no puedo acordarme');
+
+		parrafo.appendChild(texto);
+
+		listado  = document.getElementById('listado');
+
+		document.body.appendChild(parrafo);
+
+
+
+		document.getElementById('boton').addEventListener('click', borrar);
+
+		function borrar(){
+			parrafo.removeChild(texto);
+
+			document.body.removeChild(listado);
+		}
+	</script>
+</body>
+</html>

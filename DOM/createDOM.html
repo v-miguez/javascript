@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Crear elementos con DOM</title>
+
+	<style>
+		
+		a{
+			display: block;
+			width: 100px;
+			height: 20px;
+			background-color: black;
+			color: white;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+
+
+<script>
+	
+	var boton = document.createElement('a');
+	var ruta = document.createAttribute('href');
+	var id = document.createAttribute('id');
+	var textoBoton = document.createTextNode('Google');
+
+	boton.appendChild(textoBoton);
+	id.value="boton";
+	ruta.value= 'http://www.google.com';
+	boton.setAttributeNode(ruta);
+	boton.setAttributeNode(id);
+
+	document.body.appendChild(boton);
+
+
+</script>
+	
+</body>
+</html>
