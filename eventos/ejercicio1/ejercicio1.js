@@ -18,14 +18,40 @@ var nombres = new Array('Juan','Jeni','Ines','Victor','Ivan','Santi', 'Jorge','G
 
 			}
 
+/* Creo el select dinamico de enfermedades */
 
+
+var selectorDiagnostico = document.getElementById('enfermedad');
+
+var listadoEnfermedades = new Array('miopia', 'cefalea', 'conjuntivitis','gripe', 'meningitis', 'gota','diabetes', 'migraña', 'otitis', 'anginas','artritis');
+
+
+for(var i= 0; i<listadoEnfermedades.length; i++)
+{
+	selectorDiagnostico.innerHTML += '<option value="'+listadoEnfermedades[i]+'">'+listadoEnfermedades[i]+'</option>';
+}
+
+
+selectorDiagnostico.addEventListener('change', dameDiagnostico);
+
+function dameDiagnostico()
+{
+
+	filtrarDiagnostico(listaPacientes, this.value);
+}
+
+
+
+
+
+/* termino el select dinamico de enfermedades */
 
 
 
 function filtrarDiagnostico(pLista, pDiagnostico)
 {
 	var main = document.getElementById('main');
-
+	main.innerHTML = "";
 	var contador = 0;
 	for(var i=0 ; i< pLista.length ; i++)
 	{
@@ -34,7 +60,6 @@ function filtrarDiagnostico(pLista, pDiagnostico)
 		contador++;
 		}
 	}
-
 	if(contador == 0)
 	{
 		main.innerHTML = "No existen resultados";
@@ -42,7 +67,7 @@ function filtrarDiagnostico(pLista, pDiagnostico)
 
 }
 
-filtrarDiagnostico(listaPacientes, 'miopia');
+
 
 
 
