@@ -1,0 +1,36 @@
+*{margin: 0px; padding: 0px; box-sizing: border-box; }
+.lighbox{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+
+.lighbox .caja{
+	width: 500px;
+	height: 400px;
+	background-color: white;
+	border-radius: 20px;
+	padding: 30px; 
+	margin: 100px auto;
+	position: relative;
+
+}
+
+.lighbox .caja #cerrar{
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	width: 30px;
+	height: 30px;
+	color: white;
+	background-color: black;
+	text-align: center;
+	border-radius: 15px;
+	padding: 5px;
+	border: 1px solid white;
+	font-family: arial;
+	cursor: pointer;
+} 

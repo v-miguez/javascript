@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Bloquear Eventos de HTML en javascript</title>
+</head>
+<style>
+	
+	header nav ul{
+		list-style: none;
+	}
+
+	header nav ul li{
+		display: inline-block;
+	}
+
+	header nav ul li a{
+		display: inline-block;
+		padding: 10px;
+		background-color: black;
+		margin-left: 10px;
+		color: white;
+	}
+
+	main .item {
+		display: none;
+		border: 1px solid black;
+		padding: 20px;
+		position: relative;
+		top: 0px;
+	}
+	
+</style>
+<body>
+
+		<header>
+			<nav>
+				<ul id="menu">
+					<li rel="item1"><a href="http://www.google.com">Item 1</a></li>
+					<li rel="item2"><a href="#">Item 2</a></li>
+					<li rel="item3"><a href="http://www.neoland.es">Item 3</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="contenido">
+				
+				<div class="item" id="item1">
+					<h2>Titulo de la sección 1 </h2>
+					<p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sit totam quasi ducimus pariatur, provident sunt laboriosam libero? Reprehenderit et qui officia magnam, quod maiores aperiam illo numquam ullam! Consequuntur?</p>
+					<form onsubmit="bloquear();return false;" action="http://www.google.es">
+						<input type="submit" value="Enviar">
+					</form>
+				</div>
+
+				<div class="item" id="item2">
+					<h2>Titulo de la sección 2</h2>
+					<p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sit totam quasi ducimus pariatur, provident sunt laboriosam libero? Reprehenderit et qui officia magnam, quod maiores aperiam illo numquam ullam! Consequuntur?</p>
+				</div>
+
+				<div class="item" id="item3">
+					<h2>Titulo de la sección 3</h2>
+					<p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sit totam quasi ducimus pariatur, provident sunt laboriosam libero? Reprehenderit et qui officia magnam, quod maiores aperiam illo numquam ullam! Consequuntur?</p>
+				</div>
+	
+		</main>
+	<script src="main.js"></script>
+</body>
+</html>
