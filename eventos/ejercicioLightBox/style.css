@@ -8,6 +8,7 @@
 	left: 0;
 }
 
+
 .lighbox .caja{
 	width: 500px;
 	height: 400px;
@@ -18,6 +19,33 @@
 	position: relative;
 
 }
+
+header #menu li img{
+	width: 100px;
+	height: auto;
+	border-radius: 50px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+header #menu [data-tipo = "texto"] a{
+	color:red;
+} 
+
+
+.lighbox .caja object{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+.lighbox .caja img{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
 
 .lighbox .caja #cerrar{
 	position: absolute;

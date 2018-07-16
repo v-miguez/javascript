@@ -13,14 +13,29 @@ for(var i =  0; i<botones.length; i++)
 
 function cargarLighbox(e){
 	
-	crearLighbox();
+	crearLighbox(this);
 
 	e.preventDefault();
 }
 
 
 
-function crearLighbox(){
+function crearLighbox(pObjectBoton){
+
+	var tipo = pObjectBoton.dataset.tipo;
+
+	var url = pObjectBoton.innerText;
+	url = url.toLowerCase();
+
+	/* url = url.split(" ");
+
+	url = url[0]+url[1];
+
+	alert(url) */
+
+
+	url = url.replace(" ","");
+
 
 	velo = document.createElement('div');
 	velo.setAttribute('class', 'lighbox');
@@ -35,7 +50,15 @@ function crearLighbox(){
 	document.body.appendChild(velo);
 	
 
-	caja.innerHTML = '<h2>Titulo del lighbox</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eveniet voluptatum fuga rerum eaque, laudantium rem numquam asperiores nam vero amet ipsa natus delectus eligendi quam est veritatis ab totam!</p><div id="cerrar">X</div>'
+	if(tipo == "texto")
+	{
+		caja.innerHTML = '<object type="text/html" data="'+url+'.html" ></object><div id="cerrar">X</div>'
+	}
+	else if(tipo == "imagen"){
+		
+		caja.innerHTML = '<img src="'+pObjectBoton.dataset.imagen+'"><div id="cerrar">X</div>'
+	}
+	
 	var cerrar = document.getElementById('cerrar');
 	cerrar.addEventListener('click', cerrarLighbox);
 }
